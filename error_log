@@ -1,0 +1,21 @@
+[26-Aug-2025 06:33:22 UTC] PHP Warning:  require_once(php/db.php): Failed to open stream: No such file or directory in /home/nordlion/public_html/index.php on line 3
+[26-Aug-2025 06:33:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'php/db.php' (include_path='.:/opt/cpanel/ea-php84/root/usr/share/pear') in /home/nordlion/public_html/index.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/nordlion/public_html/index.php on line 3
+[26-Aug-2025 07:21:12 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/nordlion/public_html/edit_car.php on line 86
+[26-Aug-2025 07:30:32 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/nordlion/public_html/edit_car.php on line 86
+[27-Aug-2025 05:42:09 UTC] PHP Fatal error:  Uncaught TypeError: Cannot access offset of type string on string in /home/nordlion/public_html/contact.php:243
+Stack trace:
+#0 {main}
+  thrown in /home/nordlion/public_html/contact.php on line 243
+[27-Aug-2025 05:45:03 UTC] PHP Warning:  Undefined variable $isLoggedIn in /home/nordlion/public_html/add_car_onmarket.php on line 84
+[27-Aug-2025 05:45:03 UTC] PHP Warning:  Undefined variable $isLoggedIn in /home/nordlion/public_html/add_car_onmarket.php on line 179
+[27-Aug-2025 05:46:58 UTC] PHP Warning:  Undefined variable $isLoggedIn in /home/nordlion/public_html/add_car_onmarket.php on line 84
+[27-Aug-2025 05:46:58 UTC] PHP Warning:  Undefined variable $isLoggedIn in /home/nordlion/public_html/add_car_onmarket.php on line 179
+[27-Aug-2025 05:48:09 UTC] PHP Warning:  Undefined variable $isLoggedIn in /home/nordlion/public_html/current_cars.php on line 31
+[27-Aug-2025 05:48:09 UTC] PHP Warning:  Undefined variable $isLoggedIn in /home/nordlion/public_html/current_cars.php on line 94
+[27-Aug-2025 05:48:34 UTC] PHP Warning:  Undefined variable $isLoggedIn in /home/nordlion/public_html/add_car_offmarket.php on line 135
+[27-Aug-2025 16:20:39 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in /home/nordlion/public_html/edit_car.php on line 86
+[27-Aug-2025 16:20:39 UTC] PHP Warning:  Undefined variable $isLoggedIn in /home/nordlion/public_html/edit_car.php on line 154
+[27-Aug-2025 16:20:48 UTC] PHP Warning:  Undefined variable $isLoggedIn in /home/nordlion/public_html/edit_car.php on line 154

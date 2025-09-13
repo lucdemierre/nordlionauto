@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Login | NordLion International</title>
+  <link rel="icon" type="image/x-icon" href="img/logo-2.png">
+  <link rel="stylesheet" href="css/login.css" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Extra inline styles to ensure no underline on hover and proper centering */
+    .forgot-password {
+      text-align: center;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .forgot-password a {
+      color: #0F2C59;
+      text-decoration: none !important;
+    }
+    
+    .forgot-password a:hover {
+      text-decoration: none !important;
+      color: #C8A45E;
+    }
+  </style>
+</head>
+<body class="login-page">
+  <header id="header">
+    <div class="header-container">
+      <a href="index.php" class="logo">
+        <img src="img/logo-2.png" alt="NordLion Logo">
+        <span class="logo-text">NordLion International</span>
+      </a>
+      <nav>
+        <ul id="nav-menu">
+          <li><a href="index.php">Home</a></li>
+          <li><a href="onmarket.php">Cars</a></li>
+          <li><a href="offmarket.php">Off Market</a></li>
+          <li><a href="about.php">About Us</a></li>
+          <li><a href="team.php">Our Team</a></li>
+          <li><a href="contact.php">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="login-container">
+    <div class="login-form">
+      <h2>Client Portal</h2>
+      <div id="error-message" class="error-message" style="display: none;"></div>
+      
+      <form id="login-form" method="POST">
+        <div class="form-group">
+          <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        
+        <div class="form-group">
+          <label for="password"><i class="fas fa-lock"></i> Password</label>
+          <input type="password" id="password" name="password" required autocomplete="current-password">
+        </div>
+        
+        <button type="submit" class="login-btn">
+          <i class="fas fa-sign-in-alt"></i> Sign In
+        </button>
+      </form>
+      
+      <div class="form-divider">
+        <span>or</span>
+      </div>
+      
+      <div class="forgot-password">
+        <a href="#" id="forgot-password-link">Forgot your password?</a>
+      </div>
+
+      <div class="forgot-password">
+        <a href="register.php" id="register-link" style="text-decoration: none !important;">Don't have an account? <span style="text-decoration: none !important;">Register here</span></a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer" style="background-color: #0F2C59;">
+        <div class="container">
+        <div class="footer-container">
+            <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="social-icons">
+                <a href="https://www.instagram.com/the_nordlion_international/" target="_blank"><img src="img/insta.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/company/nordlion-international/?viewAsMember=true" target="_blank"><img src="img/linkedin.png" alt="LinkedIn"></a>
+                </div>
+                <img src="img/logo-2.png" alt="NordLion Logo">
+                <span class="footer-logo-text">NordLion International</span>
+            </div>
+            <p class="footer-text">Excellence in luxury vehicle brokerage.</p>
+            </div>
+
+            <div class="footer-links">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="onmarket.php">Cars</a></li>
+                <li><a href="offmarket.php">Off Market</a></li>
+                <li><a href="about.php">About Us</a></li>
+                <li><a href="team.php">Our Team</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                    <?php if ($isLoggedIn): ?>
+                    <li><a href="logout.php">Logout</a></li>
+                <?php else: ?>
+                    <li><a href="login.html">Login</a></li>
+                <?php endif; ?>
+            </ul>
+            </div>
+            <div class="footer-links">
+            <h4 class="footer-heading">Services</h4>
+            <ul>
+                <li><a href="onmarket.php">Vehicle Acquisition</a></li>
+                <li><a href="about.php">About Us</a></li>
+                <li><a href="offmarket.php">Off-Market Access</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+            </div>
+
+            <div class="footer-links">
+            <h4 class="footer-heading">Legal</h4>
+            <ul>
+                <li><a href="privacy.php">Privacy Policy</a></li>
+                <li><a href="terms.php">Terms of Service</a></li>
+                <li><a href="cookie.php">Cookie Policy</a></li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 NordLion International. All rights reserved.</p>
+        </div>
+        </div>
+    </footer>
+
+
+  
+
+  <script>
+    // Add scroll behavior for navbar - exactly matching the jets.html implementation
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+
+    // Mobile menu functionality - matching the jets.html implementation
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+        document.getElementById('nav-menu').classList.toggle('active');
+    });
+    
+    // Login form submission
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      
+      fetch('php/login.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json()) // Changed from text() to json()
+      .then(result => {
+        if (result.success) {
+          // Show temporary success message
+          const errorMessage = document.getElementById('error-message');
+          errorMessage.textContent = "Login successful! Redirecting...";
+          errorMessage.style.display = 'block';
+          errorMessage.style.backgroundColor = 'rgba(40, 167, 69, 0.1)';
+          errorMessage.style.color = '#28a745';
+          
+          // Redirect based on user role
+          setTimeout(() => {
+            window.location.href = result.redirect_url || 'mop_dashboard.php';
+          }, 1500);
+        } else {
+          // Show error message
+          const errorMessage = document.getElementById('error-message');
+          errorMessage.textContent = result.message;
+          errorMessage.style.display = 'block';
+          errorMessage.style.backgroundColor = 'rgba(220, 53, 69, 0.1)';
+          errorMessage.style.color = '#dc3545';
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        // Show generic error message
+        const errorMessage = document.getElementById('error-message');
+        errorMessage.textContent = "An error occurred. Please try again later.";
+        errorMessage.style.display = 'block';
+      });
+    });
+    
+    // Forgot password link
+    document.getElementById('forgot-password-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('Please contact our support team to reset your password.');
+    });
+  </script>
+</body>
+</html>
